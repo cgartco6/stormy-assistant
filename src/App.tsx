@@ -1,11 +1,18 @@
+import ChatArea from './components/ChatArea';
+import AlarmButton from './components/AlarmButton';
+import MapSection from './components/MapSection';
+
 function App() {
   return (
-    <div className="min-h-screen relative">
-      <ChatArea /> {/* top left exactly as requested */}
-      <div className="absolute top-8 right-8 flex gap-4">
-        <AlarmSystem />
-        <MapNavigator />
+    <div className="relative min-h-screen">
+      <ChatArea />
+      
+      <div className="absolute top-6 right-6 flex flex-col gap-6 items-end">
+        <AlarmButton />
+        <MapSection />
       </div>
     </div>
   );
 }
+
+export default App;
